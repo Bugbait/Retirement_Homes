@@ -247,7 +247,100 @@
   </main>
 
   <script>
-    co…2200 tokens truncated…: -75.8272823,
+    const home = { name: "34 Winlock Crescent", lat: 45.3299054, lon: -75.7753131 };
+    const properties = [
+      {
+        id: "rosepark", name: "Rosepark Retirement Community", address: "1717 Carling Avenue", lat: 45.3789481, lon: -75.7521058,
+        tier: "top", inside: true, assisted: true, memory: true, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $5,000–$9,000+ / month",
+        fit: "Newest and most visibly upscale choice in the search area; full continuum lets care increase without changing buildings.",
+        amenities: ["Opened 2025", "Rooftop terrace", "Saltwater pool", "Chef dining", "Theatre", "Salon & spa", "24/7 nursing", "Small pets"],
+        caution: "A new residence has a shorter operating track record. Ask about current occupancy, overnight staffing and management turnover.",
+        phone: "613-845-2200", website: "https://www.roseparkretirement.com/"
+      },
+      {
+        id: "carlingwood", name: "Carlingwood Retirement Community", address: "200 Lockhart Avenue", lat: 45.3755477, lon: -75.7720929,
+        tier: "top", inside: true, assisted: true, memory: true, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $5,000–$9,000+ / month",
+        fit: "Established, polished full-continuum residence with a strong amenity package and convenient access to Carlingwood Mall.",
+        amenities: ["Saltwater pool", "24/7 nursing", "Greenhouse", "Theatre", "Chef dining", "Underground parking", "Balconies", "Accessible bus"],
+        caution: "Confirm the exact staffing pattern on the physical assisted-living and secure cognitive floors.",
+        phone: "613-656-0333", website: "https://www.carlingwoodretirement.com/"
+      },
+      {
+        id: "amica", name: "Amica Westboro Park", address: "491 Richmond Road", lat: 45.3889145, lon: -75.7606881,
+        tier: "top", inside: true, assisted: true, memory: false, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $6,000–$10,000+ / month",
+        fit: "Premium hospitality and dining with a dedicated assisted-living floor, consistent aides and a registered nurse on duty 24/7.",
+        amenities: ["Premium dining", "Indoor pool", "24/7 RN", "Concierge", "Fitness centre", "Salon", "Richmond Road shops", "Small pets"],
+        caution: "No secure on-site memory-care neighbourhood is advertised; ask what transition plan applies if cognition declines.",
+        phone: "613-728-9274", website: "https://www.amica.ca/westboro-park/care-and-support/assisted-living"
+      },
+      {
+        id: "stirling", name: "Stirling Park Retirement Community", address: "310 Titan Private", lat: 45.3470682, lon: -75.7305508,
+        tier: "top", inside: true, assisted: true, memory: true, respite: true, published: true,
+        price: "From $2,599 / month", priceNote: "2026 directory starting rent; assisted-living quote required",
+        fit: "Strong balance of care, amenities and proximity to the current home, with physical assisted living and secure memory care.",
+        amenities: ["Saltwater pool", "24/7 professional nurse", "Hidden Oasis garden", "Balconies", "Theatre", "Salon & spa", "Underground parking", "Pets"],
+        caution: "The published starting figure is not an assisted-living total. Request the full care-package schedule.",
+        phone: "613-656-1450", website: "https://www.stirlingparkretirement.com/"
+      },
+      {
+        id: "parkplace", name: "Park Place Retirement Residence", address: "110 Central Park Drive", lat: 45.3682982, lon: -75.7362815,
+        tier: "strong", inside: true, assisted: true, memory: true, respite: true, published: true,
+        price: "From $3,600 / month", priceNote: "Directory-listed studio base; assisted-living quote required",
+        fit: "Upscale Central Park setting, substantial care capacity, visiting doctor, in-house physiotherapy and attractive common spaces.",
+        amenities: ["Chef dining", "Wellness centre", "Fitness", "Gardens", "Theatre", "Bistro", "Visiting doctor", "Two-person transfers"],
+        caution: "Recent large fee increases and ownership/financial changes make written future-pricing terms essential.",
+        phone: "613-727-2773", website: "https://www.alavidalifestyles.com/our-locations/park-place/"
+      },
+      {
+        id: "cityview", name: "City View Retirement Community", address: "151 Meadowlands Drive West", lat: 45.3428583, lon: -75.7554599,
+        tier: "strong", inside: true, assisted: true, memory: true, respite: true, published: true,
+        price: "From $5,470 / month", priceNote: "2026 directory starting figure; care level affects total",
+        fit: "Care-forward local operator with nurses and PSWs on all shifts, including high care, lifts, palliative care and memory care.",
+        amenities: ["Nurses & PSWs all shifts", "High-care floor", "Pub", "24-hour café", "Theatre", "Therapeutic spa", "Underground parking", "Bilingual"],
+        caution: "More care-focused than resort-like. Evaluate suite finish, dining and common areas against the desired luxury standard.",
+        phone: "613-518-4627", website: "https://cityviewretirement.com/"
+      },
+      {
+        id: "embassy", name: "Embassy West Senior Living", address: "1400 Carling Avenue", lat: 45.3836217, lon: -75.7384011,
+        tier: "care", inside: true, assisted: true, memory: true, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $6,000–$10,000+ / month",
+        fit: "Best for complex or rehabilitation-heavy needs: 24-hour registered nursing, two-person/mechanical lifts and in-house geriatric services.",
+        amenities: ["24-hour registered nursing", "Geriatric medical centre", "Physiotherapy", "Pharmacy", "Stroke rehabilitation", "Accessible studios", "Secure garden", "Bilingual"],
+        caution: "Care is the differentiator; compare the hospitality, suite variety and social atmosphere carefully with premium lifestyle residences.",
+        phone: "613-729-4321", website: "https://www.embassywestseniorliving.com/"
+      },
+      {
+        id: "westwood", name: "The Westwood", address: "2374 Carling Avenue", lat: 45.3663705, lon: -75.7784088,
+        tier: "strong", inside: true, assisted: true, memory: true, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $5,000–$9,000+ / month",
+        fit: "Large, established full-care community with extensive gardens, a range of suite types and easy Carling access.",
+        amenities: ["Landscaped gardens", "Private balconies", "Dining room", "Social lounges", "Memory care", "Respite suites", "Walking paths", "Transit at door"],
+        caution: "An older, large two-tower community; inspect renovated suite quality and overnight staffing in the specific care area.",
+        phone: "613-820-7333", website: "https://cogirseniorliving.ca/retirement-home-ottawa-ontario/the-westwood"
+      },
+      {
+        id: "redwoods", name: "The Redwoods", address: "2604 Draper Avenue", lat: 45.3422582, lon: -75.7893021,
+        tier: "strong", inside: true, assisted: true, memory: true, respite: true, published: false,
+        price: "Quote required", priceNote: "Planning range: $4,500–$8,000+ / month",
+        fit: "Best apartment-style space: large one- and two-bedroom suites, most with full kitchens and balconies, plus flexible support.",
+        amenities: ["Large suites", "Full kitchens", "Balconies", "24/7 team", "Valet parking", "Library", "Movie lounge", "Pet-friendly"],
+        caution: "Memory support is described for mild/early cognitive change, not a fully secure advanced-memory neighbourhood.",
+        phone: "613-356-4448", website: "https://www.springliving.ca/property/the-redwoods/"
+      },
+      {
+        id: "ravines", name: "The Ravines", address: "626 Prado Private", lat: 45.34969, lon: -75.7065016,
+        tier: "exception", inside: false, assisted: true, memory: true, respite: true, published: true,
+        price: "AL from $5,067 / month", priceNote: "IL $3,404 · memory $7,045 · respite $149–$249/day",
+        fit: "A highly relevant luxury-and-care option with the best price transparency in this comparison, but it is east of Fisher Avenue.",
+        amenities: ["Saltwater pool", "Hot tub", "Fine dining", "24-hour health professionals", "Two-person transfers", "Theatre", "Shuttle", "On-site doctor"],
+        caution: "Outside the requested boundary. Also apply the same fee-increase due diligence as Park Place.",
+        phone: "613-288-7900", website: "https://www.alavidalifestyles.com/our-locations/ravines/"
+      },
+      {
+        id: "stillwater", name: "Chartwell Stillwater Creek", address: "2018 Robertson Road", lat: 45.3231455, lon: -75.8272823,
         tier: "exception", inside: false, assisted: true, memory: true, respite: false, published: true,
         price: "Base from $3,831 / month", priceNote: "Memory $6,708 (promo $6,300); assisted-living quote required",
         fit: "Newly renovated, strong continuum and transparent published base pricing, but located just west of Highway 416.",
